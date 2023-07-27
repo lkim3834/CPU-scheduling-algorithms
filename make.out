@@ -1,0 +1,45 @@
+ld: warning: ignoring file queue.a, building for macOS-arm64 but attempting to link with file built for unknown-unsupported file format ( 0x21 0x3C 0x61 0x72 0x63 0x68 0x3E 0x0A 0x2F 0x20 0x20 0x20 0x20 0x20 0x20 0x20 )
+ld: warning: ignoring file simulator.a, building for macOS-arm64 but attempting to link with file built for unknown-unsupported file format ( 0x21 0x3C 0x61 0x72 0x63 0x68 0x3E 0x0A 0x2F 0x20 0x20 0x20 0x20 0x20 0x20 0x20 )
+Undefined symbols for architecture arm64:
+  "_main", referenced from:
+     implicit entry/start for main executable
+  "_queue_create", referenced from:
+      _scheduler in scheduler-1fa55f.o
+  "_queue_dequeue", referenced from:
+      _tick in scheduler-1fa55f.o
+      _stats in scheduler-1fa55f.o
+  "_queue_enqueue", referenced from:
+      _sys_exec in scheduler-1fa55f.o
+      _tick in scheduler-1fa55f.o
+      _io_complete in scheduler-1fa55f.o
+  "_queue_find", referenced from:
+      _tick in scheduler-1fa55f.o
+      _sys_exit in scheduler-1fa55f.o
+      _sys_read in scheduler-1fa55f.o
+      _sys_write in scheduler-1fa55f.o
+      _io_complete in scheduler-1fa55f.o
+      _io_starting in scheduler-1fa55f.o
+  "_queue_head", referenced from:
+      _tick in scheduler-1fa55f.o
+      _stats in scheduler-1fa55f.o
+  "_queue_iterate", referenced from:
+      _sys_exec in scheduler-1fa55f.o
+      _tick in scheduler-1fa55f.o
+      _io_complete in scheduler-1fa55f.o
+  "_queue_sort", referenced from:
+      _sys_exec in scheduler-1fa55f.o
+      _tick in scheduler-1fa55f.o
+      _io_complete in scheduler-1fa55f.o
+  "_sim_dispatch", referenced from:
+      _tick in scheduler-1fa55f.o
+  "_sim_time", referenced from:
+      _sys_exec in scheduler-1fa55f.o
+      _tick in scheduler-1fa55f.o
+      _sys_exit in scheduler-1fa55f.o
+      _sys_read in scheduler-1fa55f.o
+      _sys_write in scheduler-1fa55f.o
+      _io_complete in scheduler-1fa55f.o
+      _io_starting in scheduler-1fa55f.o
+      ...
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
